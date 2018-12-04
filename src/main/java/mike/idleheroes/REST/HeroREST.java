@@ -6,7 +6,7 @@
 package mike.idleheroes.REST;
 
 import java.util.List;
-import javax.enterprise.inject.Produces;
+import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import mike.idleheroes.DAO.HeroDAO;
@@ -23,7 +23,7 @@ public class HeroREST {
     @GET()
     @Produces("application/json")
     public List<HeroDTO> getHeroList() {
-        HeroDAO post = new HeroDAO();
-        return post.getHeroList();
+        HeroDAO hero = new HeroDAO();
+        return hero.getHeroList();
     }
 }
